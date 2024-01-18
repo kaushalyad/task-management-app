@@ -54,7 +54,7 @@ const TaskList = ({ tasks, onDelete, setTasks, onEdit }) => {
           w="100%"
           className="rounded-md text-white text-center justify-center items-center"
         >
-          <Text> Personal</Text>
+          <Text className="font-bold font-serif"> Personal</Text>
         </Box>
         <Box
           fontSize="3xl"
@@ -62,7 +62,7 @@ const TaskList = ({ tasks, onDelete, setTasks, onEdit }) => {
           w="100%"
           className="rounded-md text-white"
         >
-          <Text> Work</Text>
+          <Text className="font-bold font-serif"> Work</Text>
         </Box>
       </Stack>
 
