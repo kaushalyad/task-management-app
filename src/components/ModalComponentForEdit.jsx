@@ -72,7 +72,7 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
               <Box w="150px" marginTop="10px">
                 <SingleDatepicker
                   name="date-input"
-                  date={task.taskDate}
+                  date={date}
                   onDateChange={setDate}
                 />
               </Box>
