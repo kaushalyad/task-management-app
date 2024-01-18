@@ -19,7 +19,7 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
   const [inputValue, setInputValue] = useState("");
   const [date, setDate] = useState(new Date());
   const [category, setCategory] = useState(task.category);
-  const [completed, setCompleted] = useState(task.completed);
+  const [completed, setCompleted] = useState(false);
   const updateTask = (task, date) => {
     if (inputValue.length >= 0) {
       onEdit(
@@ -77,12 +77,25 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
                 />
               </Box>
               <Box justifyContent="center" alignItems="center" marginTop="13px">
-                <Checkbox
-                  isChecked={task.completed}
-                  onChange={(e) => {
-                    e.target.checked ? setCompleted(false) : setCompleted(true);
-                  }}
-                />
+                
+                {task.completed ? (
+                  <Checkbox
+                    onChange={(e) => {
+                      e.target.checked
+                        ? setCompleted(true)
+                        : setCompleted(false);
+                    }}
+                    defaultChecked
+                  />
+                ) : (
+                  <Checkbox
+                    onChange={(e) => {
+                      e.target.checked
+                        ? setCompleted(true)
+                        : setCompleted(false);
+                    }}
+                  />
+                )}
               </Box>
               <Box>
                 <label>Done</label>
