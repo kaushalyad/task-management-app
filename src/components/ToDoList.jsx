@@ -30,7 +30,7 @@ function ToDoList() {
     if (storageData !== null && storageData !== undefined) {
       setTasks(JSON.parse(storageData));
     }
-  },[]);
+  }, []);
 
   return (
     <Box>

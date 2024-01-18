@@ -34,6 +34,7 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
       );
     }
   };
+  // console.log(task.completed);
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose} isCentered="true">
@@ -77,10 +78,10 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
               </Box>
               <Box justifyContent="center" alignItems="center" marginTop="13px">
                 <Checkbox
+                  isChecked={task.completed}
                   onChange={(e) => {
-                    e.target.checked ? setCompleted(true) : setCompleted(false);
+                    e.target.checked ? setCompleted(false) : setCompleted(true);
                   }}
-                  isChecked={completed}
                 />
               </Box>
               <Box>

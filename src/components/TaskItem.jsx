@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Stack,
   Checkbox,
@@ -13,6 +12,7 @@ import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { Draggable } from "react-beautiful-dnd";
 const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  // console.log(task);
   return (
     <Draggable
       draggableId={task.taskId.toString()}
@@ -48,12 +48,14 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                       (val) => val.taskId === task.taskId
                     );
                     const updatedTasks = tasks.slice();
-                    updatedTasks[index].completed = e.target.checked;
+                    updatedTasks[index]["completed"] = e.target.checked;
+                    // console.log(updatedTasks[index]['completed'])
                     localStorage.setItem(
                       "to-do-data",
                       JSON.stringify(updatedTasks)
                     );
                     setTasks(updatedTasks);
+                    // console.log(task)
                   }}
                   isChecked={task.completed}
                 />
@@ -63,9 +65,7 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                     maxW="300px"
                     textColor="black"
                     className={` "min-[0px] max-[720px]:text-xs "    ${
-                      task.completed
-                        ? " line-through"
-                        : " no-underline"
+                      task.completed ? " line-through" : " no-underline"
                     }`}
                   >
                     {task.taskName}
@@ -93,7 +93,10 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                     setTasks={setTasks}
                   />
                 </Button>
-                <Button onClick={onDelete} className="min-[0px] max-[720px]:w-0">
+                <Button
+                  onClick={onDelete}
+                  className="min-[0px] max-[720px]:w-0"
+                >
                   <DeleteIcon />
                 </Button>
               </Stack>
