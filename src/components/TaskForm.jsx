@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input, Box, Button, Stack, Select, VStack } from "@chakra-ui/react";
 import { SingleDatepicker } from "chakra-dayzed-datepicker";
-
+import ModalComponentForChart from "./ModalComponentForChart";
 const TaskForm = ({ onAddTask }) => {
   const [inputValue, setInputValue] = useState("");
   const [date, setDate] = useState(new Date());
@@ -51,6 +51,9 @@ const TaskForm = ({ onAddTask }) => {
                 date={date}
                 onDateChange={setDate}
               />
+            </Box>
+            <Box>
+               <ModalComponentForChart />
             </Box>
           </Stack>
         </VStack>
