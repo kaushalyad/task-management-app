@@ -112,30 +112,32 @@ const Chart = ({ rerender }) => {
     }
   }, [rerender]);
   return (
-    <LineChart
-      width={1050}
-      height={400}
-      data={taskData}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="month" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Line
-        type="monotone"
-        dataKey="completedTask"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
-      />
-      <Line type="monotone" dataKey="pendingTask" stroke="#82ca9d" />
-    </LineChart>
+    <ResponsiveContainer width="95%" aspect="3">
+      <LineChart
+        width={1000}
+        height={400}
+        data={taskData}
+        margin={{
+          top: 5,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="month" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Line
+          type="monotone"
+          dataKey="completedTask"
+          stroke="#8884d8"
+          activeDot={{ r: 8 }}
+        />
+        <Line type="monotone" dataKey="pendingTask" stroke="#82ca9d" />
+      </LineChart>
+    </ResponsiveContainer>
   );
 };
 

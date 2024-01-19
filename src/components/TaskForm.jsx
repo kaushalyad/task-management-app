@@ -31,7 +31,7 @@ const TaskForm = ({ onAddTask }) => {
           <Stack spacing={2} direction="row" marginTop="10px" w="100%">
             <Select
               w="150px"
-              className={`min-[0px] max-[720px]:text-xs`}
+              className={`min-[0px] max-[720px]:min-w-[120px]`}
               onClick={(e) => {
                 setCategory(e.target.value);
               }}
