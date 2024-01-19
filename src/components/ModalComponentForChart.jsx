@@ -29,7 +29,7 @@ const ModalComponentForChart = () => {
       <Modal isOpen={isOpen} onClose={onClose} isCentered="true" size="6xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Task Graph [01/2024-12/2024]</ModalHeader>
+          <ModalHeader>Task Graph </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Chart rerender={rerenderChart} />

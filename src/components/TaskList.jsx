@@ -46,7 +46,7 @@ const TaskList = ({ tasks, onDelete, setTasks, onEdit }) => {
         justifyContent="space-between"
         direction="row"
         spacing="5%"
-        h="60px"
+        h="10%"
       >
         <Box
           fontSize="3xl"
@@ -68,12 +68,12 @@ const TaskList = ({ tasks, onDelete, setTasks, onEdit }) => {
 
       <DragDropContext onDragEnd={onDragEnd}>
         <Stack direction="row" w="95%" spacing="5%" margin="auto">
-          <Stack direction="col" w="50%">
+          <Stack direction="col" w="47.5%">
             <Droppable droppableId="personal">
               {(provided, snapshot) => (
                 <Box
-                  w="100%"
-                  className={` overflow-y-scroll min-h-0 max-h-[390px] ${
+                 
+                  className={` w-[100%] overflow-y-scroll min-h-0 max-h-[390px] ${
                     snapshot.isDraggingOver ? " bg-red-600" : " bg-red-700"
                   } `}
                   ref={provided.innerRef}
@@ -101,13 +101,12 @@ const TaskList = ({ tasks, onDelete, setTasks, onEdit }) => {
               )}
             </Droppable>
           </Stack>
-          <Stack direction="col" w="50%" minH="0px" maxHeight="390px">
+          <Stack direction="col" w="47.5%" minH="0px" maxHeight="390px">
             <Droppable droppableId="work">
               {(provided, snapshot) => (
                 <Box
                   key="drop-2"
-                  w="100%"
-                  className={` overflow-y-scroll min-h-0 max-h-[390px] ${
+                  className={` w-[100%] overflow-y-scroll min-h-0 max-h-[390px] ${
                     snapshot.isDraggingOver ? " bg-red-600" : " bg-red-700"
                   } `}
                   ref={provided.innerRef}

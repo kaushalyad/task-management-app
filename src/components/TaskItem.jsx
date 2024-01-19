@@ -59,21 +59,22 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                   }}
                   isChecked={task.completed}
                 />
-                <Container className="min-[0px] max-[720px]:text-sm text-xl">
-                  <Container
-                    m="auto"
-                    maxW="300px"
+                <Box className="min-[0px] max-[720px]:text-sm text-xl">
+                  <Box
+                    ml="1px"
+                    w="100%"
+                    maxW=" "
                     textColor="black"
-                    className={` "min-[0px] max-[720px]:text-xs "    ${
+                    className={` "min-[480px] max-[720px]:text-xs min-[480px] max-[720px]:max-w-[50px] min-[0px] max-[479px]:text-[8px]  min-[0px] max-[479px]:max-w-[30px]  "    ${
                       task.completed ? " line-through" : " no-underline"
                     }`}
                   >
                     {task.taskName}
-                  </Container>
-                  <Container fontSize="10px">
+                  </Box>
+                  <Box  className=" text-[10px] min-[0px] max-[479px]:text-[6px]  min-[0px] max-[479px]:max-w-[30px]">
                     {task.taskDate.toString()}
-                  </Container>
-                </Container>
+                  </Box>
+                </Box>
               </Stack>
               <Stack
                 spacing={2}
@@ -95,7 +96,8 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                 </Button>
                 <Button
                   onClick={onDelete}
-                  className="min-[0px] max-[720px]:w-0"
+
+                  className="min-[0px] max-[720px]:w-0 min-[0px] max-[720px]:h-3  "
                 >
                   <DeleteIcon />
                 </Button>

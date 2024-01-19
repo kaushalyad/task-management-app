@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 const Chart = ({ rerender }) => {
   const [chartData, setChartData] = React.useState([]);
