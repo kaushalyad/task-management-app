@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {
-  LineChart,
+  ComposedChart,
+  Bar,
   Line,
   XAxis,
   YAxis,
@@ -10,7 +11,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 const Chart = ({ rerender }) => {
-  const [chartData, setChartData] = React.useState([]);
   const [taskData, setTaskData] = React.useState([
     {
       month: "January",
@@ -113,30 +113,25 @@ const Chart = ({ rerender }) => {
   }, [rerender]);
   return (
     <ResponsiveContainer width="95%" aspect="3">
-      <LineChart
+      <ComposedChart
         width={1000}
-        height={400}
+        height={500}
         data={taskData}
         margin={{
-          top: 5,
-          right: 30,
+          top: 20,
+          right: 20,
+          bottom: 20,
           left: 20,
-          bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="month" />
+        <CartesianGrid stroke="#f5f5f5" />
+        <XAxis dataKey="month" scale="band" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line
-          type="monotone"
-          dataKey="completedTask"
-          stroke="#8884d8"
-          activeDot={{ r: 8 }}
-        />
-        <Line type="monotone" dataKey="pendingTask" stroke="#82ca9d" />
-      </LineChart>
+        <Bar dataKey="completedTask" barSize={50} fill="#413ea0" />
+        <Line type="monotone" dataKey="pendingTask" stroke="#ff7300" />
+      </ComposedChart>
     </ResponsiveContainer>
   );
 };

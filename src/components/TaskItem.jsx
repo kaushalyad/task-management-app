@@ -1,18 +1,10 @@
-import {
-  Stack,
-  Checkbox,
-  Container,
-  Button,
-  Box,
-  HStack,
-} from "@chakra-ui/react";
+import { Stack, Checkbox, Button, Box, HStack } from "@chakra-ui/react";
 import ModalComponentForEdit from "./ModalComponentForEdit";
 import { useDisclosure } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { Draggable } from "react-beautiful-dnd";
 const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // console.log(task);
   return (
     <Draggable
       draggableId={task.taskId.toString()}
