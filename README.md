@@ -30,26 +30,31 @@ $ npm start
 <p>
 <h4>Adding Tasks</h4>
 
-![Add]()
+![Add](https://github.com/kaushalyad/task-management-app/assets/80744782/0e0a0835-f3fe-423f-b189-2d03f410c817)
 
 </p>
 <p>
 <h4>Editing Tasks</h4>
 
-![Edit]()
+![Edit](https://github.com/kaushalyad/task-management-app/assets/80744782/319802f8-5d5a-493a-9c52-053c633ee3aa)
 
 </p>
 <p>
 <h4>Marking Tasks as completed</h4>
 
-![Completed]()
+![Completed](https://github.com/kaushalyad/task-management-app/assets/80744782/b7a04b03-fa39-4a35-a534-bd187a438ecc)
 
 </p>
 <p>
 
-<h4>User Friendly UI</h4>
+<h4>Graph Between Month And Completed Task , Pending Task </h4>
 
-![UI]()
+![Graph](https://github.com/kaushalyad/task-management-app/assets/80744782/27091792-fc65-40bb-91ae-2697131544f7)
+
+</p>
+<h4>Using Slider Task Can Be Shift From One Category To Another Category </h4>
+
+![Graph](https://github.com/kaushalyad/task-management-app/assets/80744782/27091792-fc65-40bb-91ae-2697131544f7)
 
 </p>
 
