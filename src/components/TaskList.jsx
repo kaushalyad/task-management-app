@@ -72,7 +72,6 @@ const TaskList = ({ tasks, onDelete, setTasks, onEdit }) => {
             <Droppable droppableId="personal">
               {(provided, snapshot) => (
                 <Box
-                 
                   className={` w-[100%] overflow-y-scroll min-h-0 max-h-[390px] ${
                     snapshot.isDraggingOver ? " bg-red-600" : " bg-red-700"
                   } `}

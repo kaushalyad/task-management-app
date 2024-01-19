@@ -65,13 +65,13 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                     w="100%"
                     maxW=" "
                     textColor="black"
-                    className={` "min-[480px] max-[720px]:text-xs min-[480px] max-[720px]:max-w-[50px] min-[0px] max-[479px]:text-[8px]  min-[0px] max-[479px]:max-w-[30px]  "    ${
+                    className={` "min-[480px] max-[720px]:text-xs min-[480px] max-[720px]:max-w-[50px] min-[0px] max-[479px]:text-[8px]  min-[0px] max-[479px]:max-w-[30px]  max-w-[300px] "    ${
                       task.completed ? " line-through" : " no-underline"
                     }`}
                   >
                     {task.taskName}
                   </Box>
-                  <Box  className=" text-[10px] min-[0px] max-[479px]:text-[6px]  min-[0px] max-[479px]:max-w-[30px]">
+                  <Box className=" text-[10px] min-[0px] max-[479px]:text-[6px]  min-[0px] max-[479px]:max-w-[30px]">
                     {task.taskDate.toString()}
                   </Box>
                 </Box>
@@ -96,7 +96,6 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                 </Button>
                 <Button
                   onClick={onDelete}
-
                   className="min-[0px] max-[720px]:w-0 min-[0px] max-[720px]:h-3  "
                 >
                   <DeleteIcon />

@@ -54,7 +54,7 @@ const TaskForm = ({ onAddTask }) => {
               />
             </Box>
             <Box>
-               <ModalComponentForChart />
+              <ModalComponentForChart />
             </Box>
           </Stack>
         </VStack>

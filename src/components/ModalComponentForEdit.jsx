@@ -77,7 +77,6 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
                 />
               </Box>
               <Box justifyContent="center" alignItems="center" marginTop="13px">
-                
                 {task.completed ? (
                   <Checkbox
                     onChange={(e) => {
