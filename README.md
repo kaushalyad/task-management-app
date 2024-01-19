@@ -5,7 +5,7 @@
 <h3>Technologies Used</h3>
 <p> <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
-<a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a><a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a></p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a></p>
 
 ## How To Use
 
@@ -24,7 +24,6 @@ $ npm install
 # Run the app
 $ npm start
 ```
-
 <h3>Features and Description</h3>
 <p>The Task-Management-App's features include:</p>
 <p>
@@ -54,10 +53,11 @@ $ npm start
 </p>
 <h4>Using Slider Task Can Be Shift From One Category To Another Category </h4>
 
-![Graph](https://github.com/kaushalyad/task-management-app/assets/80744782/27091792-fc65-40bb-91ae-2697131544f7)
+![Slider](https://github.com/kaushalyad/task-management-app/assets/80744782/e6ff1e73-e028-42d4-9b43-7fcbd403b18d)
 
 </p>
 
-> [kaushalyad.com](kaushalyad321.com) &nbsp;&middot;&nbsp;
+
+> Twitter [@Kaushal86924849](https://twitter.com/Kaushal86924849) &nbsp;&middot;&nbsp;
 > GitHub [@kaushalyad](https://github.com/kaushalyad) &nbsp;&middot;&nbsp;
-> Twitter [@kaushalyad](https://twitter.com/kaushalyad)
+
