@@ -7,9 +7,8 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
 } from "recharts";
-const Chart = () => {
+const Chart = ({ rerender }) => {
   const [chartData, setChartData] = React.useState([]);
   const [taskData, setTaskData] = React.useState([
     {
@@ -76,29 +75,41 @@ const Chart = () => {
 
   useEffect(() => {
     const data = localStorage.getItem("to-do-data");
-    console.log(data);
-    setChartData(JSON.parse(data));
-    chartData.map((data) => {
-      if (data.completed === true) {
-        const month = data.taskDate.split("/");
-        if (month[2] === "2024") {
-          const index = month[0] - 1;
-          const updatedData = taskData;
-          updatedData[index].completedTask += 1;
-          setTaskData(updatedData);
-        }
-      } else {
-        const month = data.taskDate.split("/");
-        if (month[2] === "2024") {
-          const index = month[0] - 1;
-          const updatedData = taskData;
-          updatedData[index].pendingTask += 1;
-          setTaskData(updatedData);
-        }
-      }
-    });
-  }, []);
 
+    if (data) {
+      const parsedData = JSON.parse(data);
+
+      parsedData.forEach((data) => {
+        if (data.completed === true) {
+          const month = data.taskDate.split("/");
+          if (month[2] === "2024") {
+            const index = month[0] - 1;
+            setTaskData((prevData) => {
+              const updatedData = [...prevData];
+              updatedData[index] = {
+                ...prevData[index],
+                completedTask: prevData[index].completedTask + 1,
+              };
+              return updatedData;
+            });
+          }
+        } else {
+          const month = data.taskDate.split("/");
+          if (month[2] === "2024") {
+            const index = month[0] - 1;
+            setTaskData((prevData) => {
+              const updatedData = [...prevData];
+              updatedData[index] = {
+                ...prevData[index],
+                pendingTask: prevData[index].pendingTask + 1,
+              };
+              return updatedData;
+            });
+          }
+        }
+      });
+    }
+  }, [rerender]);
   return (
     <LineChart
       width={1050}
