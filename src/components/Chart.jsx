@@ -112,10 +112,10 @@ const Chart = ({ rerender }) => {
     }
   }, [rerender]);
   return (
-    <ResponsiveContainer width="95%" aspect="3">
+    <ResponsiveContainer width="95%" aspect="1.9">
       <ComposedChart
         width={1000}
-        height={500}
+        height={700}
         data={taskData}
         margin={{
           top: 20,
