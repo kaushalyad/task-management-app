@@ -84,7 +84,7 @@ const Chart = ({ rerender }) => {
         if (data.completed === true) {
           const month = data.taskDate.split("/");
           if (month[2] === "2024") {
-            const index = month[0] - 1;
+            const index = month[1] - 1;
             setTaskData((prevData) => {
               const updatedData = [...prevData];
               updatedData[index] = {
@@ -97,7 +97,7 @@ const Chart = ({ rerender }) => {
         } else {
           const month = data.taskDate.split("/");
           if (month[2] === "2024") {
-            const index = month[0] - 1;
+            const index = month[1] - 1;
             setTaskData((prevData) => {
               const updatedData = [...prevData];
               updatedData[index] = {

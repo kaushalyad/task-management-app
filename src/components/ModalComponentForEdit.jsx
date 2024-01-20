@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { SingleDatepicker } from "chakra-dayzed-datepicker";
 import { useState } from "react";
+import DateFormatter from "./methods/DateFormatter";
 function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
   const [inputValue, setInputValue] = useState("");
   const [date, setDate] = useState(new Date());
@@ -27,7 +28,7 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
           taskName: inputValue,
           completed: completed,
           taskId: task.taskId,
-          taskDate: date,
+          taskDate: DateFormatter(date),
           category: category,
         },
         task.taskId
@@ -108,7 +109,7 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
             <Button
               colorScheme="whatsapp"
               onClick={() => {
-                updateTask(task, date.toLocaleDateString());
+                updateTask(task, date);
                 onClose();
               }}
             >
