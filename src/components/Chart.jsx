@@ -112,7 +112,7 @@ const Chart = ({ rerender }) => {
     }
   }, [rerender]);
   return (
-    <ResponsiveContainer width="95%" aspect="1.9">
+    <ResponsiveContainer width="95%" aspect="2">
       <ComposedChart
         width={1000}
         height={700}
