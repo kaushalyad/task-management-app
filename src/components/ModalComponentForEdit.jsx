@@ -35,7 +35,6 @@ function ModalComponentForEdit({ isOpen, tasks, onClose, task, onEdit }) {
       );
     }
   };
-  // console.log(task.completed);
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose} isCentered="true">

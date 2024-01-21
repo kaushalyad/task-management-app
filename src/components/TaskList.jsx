@@ -59,7 +59,6 @@ const TaskList = ({ tasks, onDelete, setTasks, onEdit }) => {
             fontSize={["xl", "3xl"]}
             paddingTop={["2px", "0px"]}
           >
-            {" "}
             Personal
           </Text>
         </Box>
@@ -74,7 +73,6 @@ const TaskList = ({ tasks, onDelete, setTasks, onEdit }) => {
             fontSize={["xl", "3xl"]}
             paddingTop={["2px", "0px"]}
           >
-            {" "}
             Work
           </Text>
         </Box>

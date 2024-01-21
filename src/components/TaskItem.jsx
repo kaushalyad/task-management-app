@@ -42,13 +42,11 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                     );
                     const updatedTasks = tasks.slice();
                     updatedTasks[index]["completed"] = e.target.checked;
-                    // console.log(updatedTasks[index]['completed'])
                     localStorage.setItem(
                       "to-do-data",
                       JSON.stringify(updatedTasks)
                     );
                     setTasks(updatedTasks);
-                    // console.log(task)
                   }}
                   isChecked={task.completed}
                 />
