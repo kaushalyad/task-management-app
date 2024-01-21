@@ -22,7 +22,7 @@ const TaskForm = ({ onAddTask }) => {
   return (
     <Box marginTop="25px" className="mb-5">
       <Stack direction="row" justifyContent="center">
-        <VStack  w={["53%","65%"]} >
+        <VStack w={["53%", "65%"]}>
           <Input
             placeholder="Enter Your Task"
             value={inputValue}
