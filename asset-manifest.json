@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/task-management-app/static/css/main.e15a7815.css",
-    "main.js": "/task-management-app/static/js/main.c21ce80c.js",
+    "main.css": "/task-management-app/static/css/main.b8a00d4d.css",
+    "main.js": "/task-management-app/static/js/main.eccf7707.js",
     "static/js/787.231c4f0d.chunk.js": "/task-management-app/static/js/787.231c4f0d.chunk.js",
     "static/media/bg.jpg": "/task-management-app/static/media/bg.ce09654d050cd0192872.jpg",
     "index.html": "/task-management-app/index.html",
-    "main.e15a7815.css.map": "/task-management-app/static/css/main.e15a7815.css.map",
-    "main.c21ce80c.js.map": "/task-management-app/static/js/main.c21ce80c.js.map",
+    "main.b8a00d4d.css.map": "/task-management-app/static/css/main.b8a00d4d.css.map",
+    "main.eccf7707.js.map": "/task-management-app/static/js/main.eccf7707.js.map",
     "787.231c4f0d.chunk.js.map": "/task-management-app/static/js/787.231c4f0d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e15a7815.css",
-    "static/js/main.c21ce80c.js"
+    "static/css/main.b8a00d4d.css",
+    "static/js/main.eccf7707.js"
   ]
 }
