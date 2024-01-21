@@ -35,6 +35,7 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
             <Stack justifyContent="space-between" direction="row" w="100%">
               <Stack spacing={5} direction="row">
                 <Checkbox
+                 size={['sm','md']}
                   onChange={(e) => {
                     const index = tasks.findIndex(
                       (val) => val.taskId === task.taskId
@@ -57,13 +58,13 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                     w="100%"
                     maxW=" "
                     textColor="black"
-                    className={` "min-[480px] max-[720px]:text-xs min-[480px] max-[720px]:max-w-[50px] min-[0px] max-[479px]:text-[8px]  min-[0px] max-[479px]:max-w-[30px]  max-w-[150px] "    ${
+                    className={` "min-[480px] max-[720px]:text-xs min-[480px] max-[720px]:max-w-[50px] min-[0px] max-[479px]:text-[8px]  min-[0px] max-[479px]:max-w-[30px]  "    ${
                       task.completed ? " line-through" : " no-underline"
                     }`}
                   >
                     {task.taskName}
                   </Box>
-                  <Box className=" text-[10px] min-[0px] max-[479px]:text-[6px]  min-[0px] max-[479px]:max-w-[30px]">
+                  <Box className=" text-[10px]  min-[0px] max-[479px]:text-[6px]  min-[0px] max-[479px]:max-w-[30px]" >
                     {task.taskDate.toString()}
                   </Box>
                 </Box>
@@ -74,8 +75,8 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Button onClick={onOpen} className="min-[0px] max-[720px]:w-0">
-                  <EditIcon />
+                <Button onClick={onOpen} size={['xs','md']}>
+                  <EditIcon w={['2','3']} />
                   <ModalComponentForEdit
                     onClose={onClose}
                     onOpen={onOpen}
@@ -88,9 +89,9 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                 </Button>
                 <Button
                   onClick={onDelete}
-                  className="min-[0px] max-[720px]:w-0 min-[0px] max-[720px]:h-3  "
+                  size={['xs','md']}
                 >
-                  <DeleteIcon />
+                  <DeleteIcon w={['2','3']} />
                 </Button>
               </Stack>
             </Stack>
