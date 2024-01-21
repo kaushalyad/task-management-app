@@ -55,12 +55,12 @@ const TaskItem = ({ task, onDelete, index, setTasks, tasks, onEdit }) => {
                 <Box className="min-[0px] max-[720px]:text-sm text-xl">
                   <Box
                     ml="1px"
-                    w="100%"
-                    maxW="140px "
                     textColor="black"
                     className={` "min-[480px] max-[720px]:text-xs min-[480px] max-[720px]:max-w-[50px] min-[0px] max-[479px]:text-[8px]  min-[0px] max-[1509px]:max-w-[60px]  min-[721px] max-[1400px]:max-w-[70px]  "    ${
                       task.completed ? " line-through" : " no-underline"
                     }`}
+
+                    w={['40px','110px','150px','220px']}
                   >
                     {task.taskName}
                   </Box>
