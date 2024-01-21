@@ -21,21 +21,24 @@ const TaskForm = ({ onAddTask }) => {
   };
   return (
     <Box marginTop="25px" className="mb-5">
-      <Stack direction="row" justifyContent="center">
-        <VStack w={["53%", "65%"]}>
+      <Stack direction="row" justifyContent={['start','center']} ml={['40px','auto']} p={['0px','inherit']}>
+        <VStack w={["53%", "65%"]} justify='start'>
           <Input
+            minW={'240px'}
+            size={['sm','md']}
             placeholder="Enter Your Task"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
 
-          <Stack spacing={2} direction="row" marginTop="10px" w="100%">
+          <Stack spacing={2} direction="row" marginTop="10px" w="100%" mr={['70px','auto']} ml={['10px']} >
             <Select
-              w="150px"
-              className={`min-[0px] max-[720px]:min-w-[120px]`}
+              minW='125px'
+             
               onClick={(e) => {
                 setCategory(e.target.value);
               }}
+              size={['sm','md']}
             >
               <option value="Work">No Category</option>
               <option value="Work">Work</option>
@@ -47,11 +50,14 @@ const TaskForm = ({ onAddTask }) => {
                 Birthday
               </option>
             </Select>
-            <Box w="150px">
+            <Box minW='120px' >
               <SingleDatepicker
                 name="date-input"
                 date={date}
                 onDateChange={setDate}
+                withPortal={true}
+                inline
+                daySize={1}
               />
             </Box>
             <Box>
@@ -59,7 +65,7 @@ const TaskForm = ({ onAddTask }) => {
             </Box>
           </Stack>
         </VStack>
-        <Button onClick={addTask} colorScheme="blue" marginLeft="20px">
+        <Button onClick={addTask} colorScheme="blue" marginLeft={['40px','20px']} size={['sm','md']}  >
           Add Task
         </Button>
       </Stack>
