@@ -23,7 +23,11 @@ const ModalComponentForChart = () => {
 
   return (
     <>
-      <Button onClick={handleViewChart} colorScheme="linkedin" size={['xs','md']}>
+      <Button
+        onClick={handleViewChart}
+        colorScheme="linkedin"
+        size={["xs", "md"]}
+      >
         View Chart
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} isCentered="true" size="6xl">
